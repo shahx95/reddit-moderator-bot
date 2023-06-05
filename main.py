@@ -2,7 +2,7 @@ from replit import db
 from functions import *
 import os, requests, random, praw, time, traceback, re
 from datetime import datetime, date
-from alive import alive
+# from alive import alive
 
 existing_db_keys = db.keys() #{'whitelist', 'blacklist', 'filteredSubs', 'mods'}
 default_values = {
@@ -26,7 +26,7 @@ reddit = praw.Reddit(client_id=os.getenv('client_id'),
                      username=os.getenv('username'))
 
 #keep the bot alive on Replit
-alive()
+# alive()
 
 #static information
 mod_sub = os.getenv('mod_sub')
