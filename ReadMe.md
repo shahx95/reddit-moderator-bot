@@ -39,6 +39,7 @@ This is the updated version of my Reddit Moderator Bot, developed after PushShit
 - Populate the default values in `main.py` with appropriate information
 - In `functions.py`, replace the existing dummy values in banned_word_array with the desired banned words.
 - Press CTRL + ENTER or click **Run** to start the bot
+- To fix the "PRAW not found" error, run pip install praw in the shell and retry.
 
 ## Usage
 Once the bot is up and running, it will continuously monitor the specified subreddit for new submissions and comments. The bot will only run for 30 minutes if it doesn't have a webserver being pinged.  To have an **Always On** bot you can buy a Replit personal plan or create a webserver that gets pinged very hour (hint: alive() function in `main.py`) 
