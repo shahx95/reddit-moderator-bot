@@ -4,6 +4,21 @@ import os, requests, random, praw, time, traceback, re
 from datetime import datetime, date
 from alive import alive
 
+existing_db_keys = db.keys() #{'whitelist', 'blacklist', 'filteredSubs', 'mods'}
+default_values = {
+    'whitelist': [], #You can populate this list with any existing list of whitelisted users you may have
+    'blacklist': [], #You can populate this list with any existing list of blacklisted users you may have
+    'filteredSubs': [], #Enter the names of subreddits that promote community interference in your subreddit  
+    'mods': []  # Enter the usernames of mods
+}
+
+#initialize replit db
+for key in default_values:
+    if key not in existing_db_keys:
+        db[key] = default_values[key]
+
+
+
 reddit = praw.Reddit(client_id=os.getenv('client_id'),
                      client_secret=os.getenv('client_secret'),
                      password=os.getenv('password'),
